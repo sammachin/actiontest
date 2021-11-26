@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: scorecard_name
         id: scorecard_step
-        uses: sammachin/hello-world-docker-action@v1.3
+        uses: sammachin/hello-world-docker-action@v1.4
         with:
           package: 'node-red-contrib-ngrok'
       # Use the output from the `hello` step
