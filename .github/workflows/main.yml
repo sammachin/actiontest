@@ -1,15 +1,15 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  scorecard:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Run the scorecard
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: sammachin/hello-world-docker-action@v1.2
+      - name: scorecard_name
+        id: scorecard_step
+        uses: sammachin/hello-world-docker-action@v1.3
         with:
-          who-to-greet: 'Mona the Octocat'
+          package: 'node-red-contrib-ngrok'
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: output_name
+        run: echo "${{ steps.scorecard_name.outputs.scorecard }}"
